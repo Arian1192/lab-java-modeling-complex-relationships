@@ -1,4 +1,4 @@
-package com.ironhack.labjavamodelingcomplexrelationships.model;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise1.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,7 +17,7 @@ public class Association {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(mappedBy = "association")
+    @OneToMany(mappedBy = "association", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Chapter> chapters;
 }
 

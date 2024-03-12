@@ -1,9 +1,12 @@
-package com.ironhack.labjavamodelingcomplexrelationships.repository;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise1.repository;
 
-import com.ironhack.labjavamodelingcomplexrelationships.enums.MemberStatus;
-import com.ironhack.labjavamodelingcomplexrelationships.model.Association;
-import com.ironhack.labjavamodelingcomplexrelationships.model.Chapter;
-import com.ironhack.labjavamodelingcomplexrelationships.model.Member;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.enums.MemberStatus;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.model.Association;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.model.Chapter;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.model.Member;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.repository.AssociationRepository;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.repository.ChapterRepository;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.repository.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

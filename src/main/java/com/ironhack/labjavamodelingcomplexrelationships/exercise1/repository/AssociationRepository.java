@@ -1,8 +1,7 @@
-package com.ironhack.labjavamodelingcomplexrelationships.repository;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise1.repository;
 
-import com.ironhack.labjavamodelingcomplexrelationships.model.Association;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.model.Association;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
