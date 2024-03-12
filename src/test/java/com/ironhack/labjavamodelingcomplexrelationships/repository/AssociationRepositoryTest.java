@@ -1,6 +1,7 @@
 package com.ironhack.labjavamodelingcomplexrelationships.repository;
 
 import com.ironhack.labjavamodelingcomplexrelationships.model.Association;
+import com.ironhack.labjavamodelingcomplexrelationships.model.Chapter;
 import com.ironhack.labjavamodelingcomplexrelationships.repository.AssociationRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,10 +22,12 @@ class AssociationRepositoryTest {
     private AssociationRepository as;
 
     private Association association;
+    private Set<Chapter> chapterSet;
     @BeforeEach
     //given
     void setUp() {
         association = new Association();
+
 
     }
 

@@ -1,35 +1,31 @@
 package com.ironhack.labjavamodelingcomplexrelationships.model;
 
+import com.ironhack.labjavamodelingcomplexrelationships.enums.MemberStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-import java.util.Set;
+import java.time.LocalDate;
 
 @Entity
-@Getter
-@Setter
+@Table(name = "member")
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "chapter")
-public class Chapter {
+@Getter
+@Setter
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-    private String district;
 
-    @OneToOne
-    private Member president;
+    @Enumerated(EnumType.STRING)
+    private MemberStatus status;
 
-
-    @OneToMany(mappedBy = "chapter", cascade = CascadeType.ALL)
-    private List<Member> members;
+    private LocalDate renewalDate;
 
     @ManyToOne
-    private Association association;
+    private Chapter chapter;
 }
