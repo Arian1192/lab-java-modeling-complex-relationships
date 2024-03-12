@@ -1,6 +1,6 @@
-package com.ironhack.labjavamodelingcomplexrelationships.model;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise1.model;
 
-import com.ironhack.labjavamodelingcomplexrelationships.enums.MemberStatus;
+import com.ironhack.labjavamodelingcomplexrelationships.exercise1.enums.MemberStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,4 +26,11 @@ public class Member {
 
     @ManyToOne
     private Chapter chapter;
+
+    public Member(String name, MemberStatus status, LocalDate renewalDate, Chapter chapter) {
+        this.name = name;
+        this.status = status;
+        this.renewalDate = renewalDate;
+        this.chapter = chapter;
+    }
 }
