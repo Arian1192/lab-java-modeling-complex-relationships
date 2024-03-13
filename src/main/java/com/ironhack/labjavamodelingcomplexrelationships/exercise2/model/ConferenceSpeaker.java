@@ -1,4 +1,4 @@
-package com.ironhack.labjavamodelingcomplexrelationships.exercise2;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise2.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,20 +7,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "guest")
-public class Guest {
+public class ConferenceSpeaker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Enumerated(EnumType.STRING)
-    private GuestStatus status;
+    private int presentationDuration;
 
     @ManyToOne
-    private Event event;
+    private Conference event;
 
 }

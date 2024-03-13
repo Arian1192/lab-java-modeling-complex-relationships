@@ -1,4 +1,4 @@
-package com.ironhack.labjavamodelingcomplexrelationships.exercise2;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise2.model;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;

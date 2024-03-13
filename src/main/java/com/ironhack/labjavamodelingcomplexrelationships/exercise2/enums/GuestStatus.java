@@ -1,4 +1,4 @@
-package com.ironhack.labjavamodelingcomplexrelationships.exercise2;
+package com.ironhack.labjavamodelingcomplexrelationships.exercise2.enums;
 
 public enum GuestStatus {
     ATTENDING,
