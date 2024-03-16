@@ -42,10 +42,10 @@ class MemberRepositoryTest {
         memberRepository.save(president);
 
         List<Member> listMember = new ArrayList<>();
-        Chapter chapter = new Chapter(1L, "Lunara", "Lunara-district", president, listMember, association );
-        Member member1 = new Member(1L, "Pedro", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
-        Member member2 = new Member(2L, "Pedro", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
-        member3 = new Member(3L, "Maria", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
+        Chapter chapter = new Chapter("Lunara", "Lunara-district", president, listMember, association );
+        Member member1 = new Member( "Pedro", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
+        Member member2 = new Member( "Pedro", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
+        member3 = new Member( "Maria", MemberStatus.ACTIVE, new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), chapter);
         listMember.add(member1);
         listMember.add(member2);
         listMember.add(member3);
@@ -56,6 +56,7 @@ class MemberRepositoryTest {
 
     @AfterEach
     void tearDown() {
+        memberRepository.deleteAll();
         chapterRepository.deleteAll();
         associationRepository.deleteAll();
     }
